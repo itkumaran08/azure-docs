@@ -277,7 +277,7 @@ In addition to the proven practices for [All Services](#allservices) described p
 In addition to the bandwidth limitations of an entire storage account, tables have the following specific scalability limit.  Note that the system will load balance as your traffic increases, but if your traffic has sudden bursts, you may not be able to get this volume of throughput immediately.  If your pattern has bursts, you should expect to see throttling and/or timeouts during the burst as the storage service automatically load balances out your table.  Ramping up slowly generally has better results as it gives the system time to load balance appropriately.  
 
 #### Entities per Second (Account)
-The scalability limit for accessing tables is up to 20,000 entities (1KB each) per second for an account.  In general, each entity that is inserted, updated, deleted, or scanned counts toward this target.  So a batch insert that contains 100 entities would count as 100 entities.  A query that scans 1000 entities and returns 5 would count as 1000 entities.  
+The scalability limit for accessing tables is up to 20,000 transactions (1KB each) per second for an account.  In general, each entity that is inserted, updated, deleted, or scanned counts toward this target.  But in batch insert that contains 100 entities would count as one transaction.  A query that scans 1000 entities and returns 5 would count as 1000 entities.  
 
 #### Entities per Second (Partition)
 Within a single partition, the scalability target for accessing tables is 2,000 entities (1KB each) per second, using the same counting as described in the previous section.  
