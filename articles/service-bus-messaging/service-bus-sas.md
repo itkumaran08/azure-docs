@@ -351,8 +351,8 @@ The following table shows the access rights required for various operations on S
 | Get the state associated with a topic session |Listen |../myTopic/Subscriptions/mySubscription |
 | Set the state associated with a topic session |Listen |../myTopic/Subscriptions/mySubscription |
 | **Rules** | | |
-| Create a rule |Manage |../myTopic/Subscriptions/mySubscription |
-| Delete a rule |Manage |../myTopic/Subscriptions/mySubscription |
+| Create a rule |Listen |../myTopic/Subscriptions/mySubscription |
+| Delete a rule |Listen |../myTopic/Subscriptions/mySubscription |
 | Enumerate rules |Manage or Listen |../myTopic/Subscriptions/mySubscription/Rules 
 
 ## Next steps
